@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import ImageDiv from "./components/ImageDiv";
 import Wrapper from "./components/Wrapper";
+import Navbar from "./components/Navbar";
 import images from "./images.json";
 import './App.css';
 
 class App extends Component {
+  
   state = {
     score: 0,
     images
@@ -14,12 +16,14 @@ class App extends Component {
     const images = this.state.images.map(image => {
       if(image.id === id && image.clicked === false){
         image.clicked=true;
-        this.setState({ score: this.state.score + 1 })
+        document.getElementById("answer-text").innerText = "You guessed correctly!";
+        this.setState({ score: this.state.score + 1 });
       }
 
+      // Still need to determine how to reset all image obj 'clicked' properties to false again
       else if(image.id === id && image.clicked === true){
-        this.setState({ score: 0 })
-        alert("You lose!")
+        this.setState({ score: 0 });
+        document.getElementById("answer-text").innerText = "You guessed incorrectly!";
       }
       return image
     })
@@ -29,10 +33,10 @@ class App extends Component {
 
   render() {
     return (
+      <div>
+      <Navbar score={this.state.score}/>
       <Wrapper>
-        Score: {this.state.score}
-
-        {this.state.images.map(image => (
+         {this.state.images.map(image => (
           <ImageDiv 
           image={image.image}
           name={image.name}
@@ -43,6 +47,7 @@ class App extends Component {
           />
         ))}
       </Wrapper>
+      </div>
     )
   }
 }
