@@ -1,0 +1,9 @@
+.img-item {
+    background-size: cover;
+    background-position: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 8px 25px;
+    object-fit: cover;
+    cursor: pointer;
+}

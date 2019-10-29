@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
-import ImageCard from "./components/ImageCard";
+import ImageDiv from "./components/ImageDiv";
 import Wrapper from "./components/Wrapper";
 import images from "./images.json";
 import './App.css';
 
 class App extends Component {
   state = {
-    score: 0
+    images
   };
+
+  render() {
+    return (
+      <Wrapper>
+        {this.state.images.map(image => (
+          <ImageDiv 
+          image={image.image}
+          name={image.name}
+          id={image.id}
+          key={image.id}
+          />
+        ))}
+      </Wrapper>
+    )
+  }
 }
 
 export default App;
