@@ -5,36 +5,48 @@ import Navbar from "./components/Navbar";
 import images from "./images.json";
 import './App.css';
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 class App extends Component {
   
   state = {
     score: 0,
-    images
+    topScore: 0,
+    images: shuffleArray(images)
   };
 
   handleClick = id => {
-    const images = this.state.images.map(image => {
+    const newImages = this.state.images.map(image => {
       if(image.id === id && image.clicked === false){
         image.clicked=true;
         document.getElementById("answer-text").innerText = "You guessed correctly!";
         this.setState({ score: this.state.score + 1 });
       }
 
-      // Still need to determine how to reset all image obj 'clicked' properties to false again
       else if(image.id === id && image.clicked === true){
         this.setState({ score: 0 });
+        this.state.images.forEach(image => image.clicked=false);
         document.getElementById("answer-text").innerText = "You guessed incorrectly!";
+        if(this.state.score > this.state.topScore) {
+          this.setState({ topScore: this.state.score }) 
+        }
       }
       return image
     })
 
-    this.setState({ images: images })
+    this.setState({ images: shuffleArray(newImages) })
   }
 
   render() {
     return (
       <div>
-      <Navbar score={this.state.score}/>
+      <Navbar score={this.state.score} topScore={this.state.topScore}/>
       <Wrapper>
          {this.state.images.map(image => (
           <ImageDiv 
