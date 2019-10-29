@@ -6,4 +6,9 @@
     margin: 8px 25px;
     object-fit: cover;
     cursor: pointer;
+    transition: transform .2s;
+}
+
+.img-item:hover {
+    transform: scale(1.1); 
 }
