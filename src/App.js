@@ -18,6 +18,7 @@ class App extends Component {
   state = {
     score: 0,
     topScore: 0,
+    shake: false,
     images: shuffleArray(images)
   };
 
@@ -26,13 +27,15 @@ class App extends Component {
       if(image.id === id && image.clicked === false){
         image.clicked=true;
         document.getElementById("answer-text").innerText = "You guessed correctly!";
+        this.setState({ shake: false });
         this.setState({ score: this.state.score + 1 });
       }
 
       else if(image.id === id && image.clicked === true){
         this.setState({ score: 0 });
+        this.setState({ shake: true });
         this.state.images.forEach(image => image.clicked=false);
-        document.getElementById("answer-text").innerText = "You guessed incorrectly!";
+        document.getElementById("answer-text").innerText = "Try Again!";
         if(this.state.score > this.state.topScore) {
           this.setState({ topScore: this.state.score }) 
         }
@@ -47,7 +50,7 @@ class App extends Component {
     return (
       <div>
       <Navbar score={this.state.score} topScore={this.state.topScore}/>
-      <Wrapper>
+      <Wrapper shake={this.state.shake}>
          {this.state.images.map(image => (
           <ImageDiv 
           image={image.image}
