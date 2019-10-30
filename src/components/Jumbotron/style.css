@@ -1,0 +1,8 @@
+.card-image {
+    background-image: url("https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/5/51/Avengers_Tower_AoU.png/revision/latest?cb=20151110182818");
+    background-size: cover;
+}
+
+.lead {
+    font-size: 1.5rem;
+}

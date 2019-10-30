@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ImageDiv from "./components/ImageDiv";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar";
+import Jumbotron from "./components/Jumbotron";
+import Footer from "./components/Footer";
 import images from "./images.json";
 import './App.css';
 
@@ -50,6 +52,7 @@ class App extends Component {
     return (
       <div>
       <Navbar score={this.state.score} topScore={this.state.topScore}/>
+      <Jumbotron />
       <Wrapper shake={this.state.shake}>
          {this.state.images.map(image => (
           <ImageDiv 
@@ -62,6 +65,7 @@ class App extends Component {
           />
         ))}
       </Wrapper>
+      <Footer />
       </div>
     )
   }
