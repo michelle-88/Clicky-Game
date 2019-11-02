@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 import Footer from "./components/Footer";
 import images from "./images.json";
-import './App.css';
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
