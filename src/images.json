@@ -3,72 +3,72 @@
         "id": 1,
         "name": "Iron Man",
         "clicked": false,
-        "image": "https://www.searchpng.com/wp-content/uploads/2019/03/Iron-Man-PNG-Image-715x715.png"
+        "image": "images/iron-man.png"
     },
     {
         "id": 2,
         "name": "Thor",
         "clicked": false,
-        "image": "https://www.clipartwiki.com/clipimg/detail/86-864182_thor-png-avengers-endgame-png.png"
+        "image": "images/thor.png"
     },
     {
         "id": 3,
         "name": "Hulk",
         "clicked": false,
-        "image": "http://www.pngall.com/wp-content/uploads/2016/03/Avengers-Hulk-PNG.png"
+        "image": "images/hulk.png"
     },
     {
         "id": 4,
         "name": "Black Widow",
         "clicked": false,
-        "image": "https://www.clipartwiki.com/clipimg/detail/130-1308101_file-comics-widow-black-iron-man-marvel-clipart.png"
+        "image": "images/black-widow.png"
     },
     {
         "id": 5,
         "name": "Hawkeye",
         "clicked": false,
-        "image": "https://www.clipartwiki.com/clipimg/detail/197-1973311_hawkeye-cut-out-gavio-arqueiro-guerra-infinita.png"
+        "image": "images/hawkeye.png"
     },
     {
         "id": 6,
         "name": "Captain America",
         "clicked": false,
-        "image": "https://www.clipartwiki.com/clipimg/detail/312-3125320_download-captain-america-png-photo-for-designing-projects.png"
+        "image": "images/captain-america.png"
     },
     {
         "id": 7,
         "name": "Ant-Man",
         "clicked": false,
-        "image": "https://www.clipartwiki.com/clipimg/detail/59-590443_directory-listing-for-marvel-ant-man-png.png"
+        "image": "images/ant-man.png"
     },
     {
         "id": 8,
         "name": "War Machine",
         "clicked": false,
-        "image": "https://www.pnglot.com/pngfile/detail/312-3120011_war-machine-mk-iii-war-machine-civil-war.png"
+        "image": "images/war-machine.png"
     },
     {
         "id": 9,
         "name": "Doctor Strange",
         "clicked": false,
-        "image": "https://www.clipartwiki.com/clipimg/full/54-544186_doctor-strange-photo-shield-of-doctor-strange.png"
+        "image": "images/doctor-strange.png"
     },
     {
         "id": 10,
         "name": "Black Panther",
         "clicked": false,
-        "image": "https://www.sccpre.cat/png/big/1/16466_black-panther-png.png"
+        "image": "images/black-panther.png"
     },
     {
         "id": 11,
         "name": "Star-Lord",
         "clicked": false,
-        "image": "https://www.jing.fm/clipimg/detail/238-2387514_star-pictures-trzcacak-rs-transparent-background-star-lord.png"
+        "image": "images/star-lord.png"
     },
     {
         "id": 12,
         "name": "Spider-Man",
         "clicked": false,
-        "image": "https://cdn130.picsart.com/271240943032211.png?r1024x1024"
+        "image": "images/spiderman.png"
     }
 ]
